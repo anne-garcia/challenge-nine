@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('../partials/head.ejs', { title: "Login" }); -%>
+
+<body>
+    <h1 class="alignCentre">LOGIN</h1>
+    <%- include('../partials/nav.ejs', { username: username }); -%>
+    <%- include('../partials/userAccessForm.ejs', { 
+        route: '/login',
+        registrationFields: false
+    }); -%>
+</body>
+</html>

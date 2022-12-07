@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('partials/head.ejs', { title: "Fact" }); -%>
+
+<body>
+    <h1 class="alignCentre">CAT FACT</h1>
+
+    <%- include('partials/nav.ejs', { username: username }); -%>
+
+    <% for(const key in doc_Fact) { %>
+    <div><%= key %>: <%= doc_Fact[key] %></div>
+    <% } %>
+</body>
+</html>

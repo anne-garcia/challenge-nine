@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('partials/head.ejs', { title: "Facts" }); -%>
+
+<body>
+    <h1 class="alignCentre">CAT FACTS</h1>
+
+    <%- include('partials/nav.ejs', { username: username }); -%>
+
+    <ul>
+        <% for(const docFact of docArr_Facts) { %>
+        <li class="margBot20">
+            <a href="/facts/<%= docFact._id %>"><%= docFact.fact %></a>
+        </li>
+        <% } %>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<form id="UserAccessForm" action="<%= route %>" method="post">
+
+    <% if(registrationFields) { %>
+
+    <h2>Bio information (all fields required)</h2>
+
+    <div class="margBot20">
+        <label for="firstName" class="dispBlock">First Name</label>
+        <input name="firstName" type="text" />
+    </div>
+
+    <div class="margBot20">
+        <label for="lastName" class="dispBlock">Last Name</label>
+        <input name="lastName" type="text" />
+    </div>
+
+    <div class="margBot20">
+        <label for="profileImage" class="dispBlock">Profile Image</label>
+        <input name="profileImage" type="file" accept="image/*" />
+    </div>
+
+    <div class="margBot20">
+        <label for="email" class="dispBlock">Email</label>
+        <input name="email" type="email" />
+    </div>
+
+    <div class="margBot20">
+        <label for="birthDate" class="dispBlock">Birth Date</label>
+        <input name="birthDate" type="date" />
+    </div>
+
+    <h2>Login information (all fields required)</h2>
+
+    <% } %>
+
+    <div class="margBot20">
+        <label for="username" class="dispBlock">Username</label>
+        <input name="username" type="text" />
+    </div>
+
+    <div class="margBot20">
+        <label for="password" class="dispBlock">Password</label>
+        <input name="password" type="password" />
+    </div>
+
+    <% if(registrationFields) { %>
+
+    <div class="margBot20">
+        <label for="password2" class="dispBlock">Confirm Password</label>
+        <input name="password2" type="password" />
+    </div>
+
+    <% } %>
+
+    <button name="submitBtn" type="submit">Submit</button>
+</form>

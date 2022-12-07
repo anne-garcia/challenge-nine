@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('../partials/head.ejs', { title: "Register" }); -%>
+
+<body onload="Main.HandleRegistrationForm();">
+    <h1 class="alignCentre">REGISTER</h1>
+    <%- include('../partials/nav.ejs', { username: username }); -%>
+    <%- include('../partials/userAccessForm.ejs', { 
+        route: '/register',
+        registrationFields: true
+    }); -%>
+</body>
+</html>

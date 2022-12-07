@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('partials/head.ejs', { title: "Breeds" }); -%>
+
+<body>
+    <h1 class="alignCentre">CAT BREEDS</h1>
+
+    <%- include('partials/nav.ejs', { username: username }); -%>
+
+    <% for(const docBreed of docArr_Breeds) { %>
+    <a class="dispBlock margBot20" href="/breeds/<%= docBreed._id %>">
+        <div>Breed: <%= docBreed.breed %></div>
+        <img src="<%= docBreed.image %>" />
+    </a>
+    <% } %>
+</body>
+</html>

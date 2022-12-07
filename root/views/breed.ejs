@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('partials/head.ejs', { title: "Breed: " + doc_Breed.breed }); -%>
+
+<body>
+    <h1 class="alignCentre">CAT BREED: <%= doc_Breed.breed %></h1>
+
+    <%- include('partials/nav.ejs', { username: username }); -%>
+
+    <img src="<%= doc_Breed.image %>" />
+
+    <% for(const key in doc_Breed) { %>
+    <div><%= key %>: <%= doc_Breed[key] %></div>
+    <% } %>
+</body>
+</html>
